@@ -154,19 +154,19 @@ class AppDelegate:NSObject, NSApplicationDelegate
 	func populateFindMenu(_ menu:NSMenu) {
 		var title = NSLocalizedString("Find…", comment:"Find… menu item")
 		var menuItem = menu.addItem(withTitle:title, action:#selector(NSResponder.performTextFinderAction(_:)), keyEquivalent:"f")
-		menuItem.tag = NSTextFinderAction.showFindInterface.rawValue
+		menuItem.tag = NSTextFinder.Action.showFindInterface.rawValue
 		
 		title = NSLocalizedString("Find Next", comment:"Find Next menu item")
 		menuItem = menu.addItem(withTitle:title, action:#selector(NSResponder.performTextFinderAction(_:)), keyEquivalent:"g")
-		menuItem.tag = NSTextFinderAction.nextMatch.rawValue
+		menuItem.tag = NSTextFinder.Action.nextMatch.rawValue
 		
 		title = NSLocalizedString("Find Previous", comment:"Find Previous menu item")
 		menuItem = menu.addItem(withTitle:title, action:#selector(NSResponder.performTextFinderAction(_:)), keyEquivalent:"G")
-		menuItem.tag = NSTextFinderAction.previousMatch.rawValue
+		menuItem.tag = NSTextFinder.Action.previousMatch.rawValue
 		
 		title = NSLocalizedString("Use Selection for Find", comment:"Use Selection for Find menu item")
 		menuItem = menu.addItem(withTitle:title, action:#selector(NSResponder.performTextFinderAction(_:)), keyEquivalent:"e")
-		menuItem.tag = NSTextFinderAction.setSearchString.rawValue
+		menuItem.tag = NSTextFinder.Action.setSearchString.rawValue
 		
 		title = NSLocalizedString("Jump to Selection", comment:"Jump to Selection menu item")
 		menu.addItem(withTitle:title, action:#selector(NSResponder.centerSelectionInVisibleArea(_:)), keyEquivalent:"j")
