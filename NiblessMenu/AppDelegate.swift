@@ -214,7 +214,7 @@ class AppDelegate:NSObject, NSApplicationDelegate
 	
 	func populateHelpMenu(_ menu:NSMenu) {
 		let title = applicationName + " " + NSLocalizedString("Help", comment:"Help menu item") 
-		let menuItem = menu.addItem(withTitle:title, action:#selector(NSApplication.showHelp(_:)), keyEquivalent:"?")
+		let menuItem = menu.addItem(withTitle:title, action:#selector(NSApplication.showHelp(_:)), keyEquivalent:"")
 		menuItem.target = NSApp
 	}
 }
