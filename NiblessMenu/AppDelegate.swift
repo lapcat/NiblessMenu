@@ -61,7 +61,7 @@ class AppDelegate:NSObject, NSApplicationDelegate
 		NSApp.windowsMenu = submenu
 		
 		menuItem = mainMenu.addItem(withTitle:"Help", action:nil, keyEquivalent:"")
-		submenu = NSMenu(title:NSLocalizedString("Help", comment:"View menu"))
+		submenu = NSMenu(title:NSLocalizedString("Help", comment:"Help menu"))
 		populateHelpMenu(submenu)
 		mainMenu.setSubmenu(submenu, for:menuItem)
 		
