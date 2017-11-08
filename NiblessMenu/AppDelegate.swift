@@ -65,6 +65,10 @@ class AppDelegate:NSObject, NSApplicationDelegate
 		populateHelpMenu(submenu)
 		mainMenu.setSubmenu(submenu, for:menuItem)
 		
+		// NSApplication will make a copy of your menu,
+		// so if you need to access the mainMenu after this point,
+		// your current menu reference won't work anymore,
+		// and you need to get a new reference from NSApp.mainMenu
 		NSApp.mainMenu = mainMenu
 	}
 	
